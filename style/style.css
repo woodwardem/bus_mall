@@ -1,6 +1,6 @@
 h1 {
-    background: lightseagreen;
-    border: 1px solid lightseagreen;
+    background: darkblue;
+    border: 1px solid darkblue;
     text-align: center;
 }
 main {
@@ -9,13 +9,19 @@ main {
     justify-content: center;
 }
 
-main > #1picture {
+ .images {
+height: 160px;
+width: 160px;
+background: lightslategray;
+text-align: center;
+margin-top: 88px;
 
+margin-right: 90px;
 }
 
 main > #leftnav {
-    background: orangered;
-    border: 1px solid orangered;
+    background: lightskyblue;
+    border: 1px solid lightskyblue;
     text-align: center;
     order: 1;
     display: grid;
@@ -26,10 +32,13 @@ main > #leftnav {
     height: 520px;
     font-size: 28px;
 }
-
+section > h1 {
+ margin-bottom: 89px;
+ margin-top: 85px;
+ text-align: center;
+}
 section {
-    background: lightsalmon;
-    text-align: center;
+    background: darkblue;
     border: 1px solid lightsalmon;
     display: flex;
     flex-direction: row;
@@ -39,8 +48,8 @@ section {
     justify-content: center;
 }
 main > #rightdiv {
-    background: orangered;
-    border: 1px solid orangered;
+    background: lightskyblue;
+    border: 1px solid lightskyblue;
     text-align: center;
     order: 3;
     display: grid;
@@ -52,8 +61,8 @@ main > #rightdiv {
 
 
 footer {
-    background: lightseagreen;
-    border: 1px solid lightseagreen;
+    background: lightskyblue;
+    border: 1px solid lightskyblue;
     text-align: center;
     position: fixed;
     width: 1350px;
