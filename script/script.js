@@ -1,22 +1,22 @@
-console.log('hello world');
+'use strict'
 
-let img1 = document.getElementById('img1');
-let img2 = document.getElementById('img2');
-let img3 = document.getElementById('img3');
+let img0Container = document.getElementById('img0Container');
+let img1Container = document.getElementById('img1Container');
+let img2Container = document.getElementById('img2Container');
 
-img1.addEventListener('click', function(){
-    console.log('I am img1')
+img1Container.addEventListener('click', function(){
+    console.log('I am img1Container')
 })
    
-img2.addEventListener('click', function(){
-    console.log('I am img2')
+img2Container.addEventListener('click', function(){
+    console.log('I am img2Container')
 })
 
-img3.addEventListener('click', function(){
-    console.log('I am img3')
+img3Container.addEventListener('click', function(){
+    console.log('I am img3Container')
 })
 function runFunctionImage() {
-    console.log('I am in img1');
+    console.log('I am in img1Container');
 }
 
 
@@ -49,3 +49,15 @@ let PRODUCTS_ARRAY = [
 {HTMLid : 'wine-glass', imgURL: './assets/wine-glass.jpg', totalViews: 0, totalVoices: 0},
 
 ]
+
+
+function renderImages() {
+ 
+ for ( let i=0; i<=2; i++)
+ 
+    //1. get element from html that we wnat to attatch to the image
+    //2. create an image element
+    // set src property of the image to the image url property of the item
+    // 4. append the image to the div element
+ let imgContainer = document.getElementById('img1Container');
+}
