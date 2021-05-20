@@ -1,32 +1,5 @@
 'use strict'
 
-let img0Container = document.getElementById('img0Container');
-let img1Container = document.getElementById('img1Container');
-let img2Container = document.getElementById('img2Container');
-
-img1Container.addEventListener('click', function(){
-    console.log('I am img1Container')
-})
-   
-img2Container.addEventListener('click', function(){
-    console.log('I am img2Container')
-})
-
-img3Container.addEventListener('click', function(){
-    console.log('I am img3Container')
-})
-function runFunctionImage() {
-    console.log('I am in img1Container');
-}
-
-
-let bagObject = {
-    HTMLid : 'bag',
-    imgURL: './assets/bag.jpg',
-    totalViews: 0,
-    totalVoices: 0
-}
-
 let PRODUCTS_ARRAY = [
 {HTMLid : 'bag', imgURL: './assets/bag.jpg', totalViews: 0, totalVoices: 0},
 {HTMLid : 'banana', imgURL: './assets/banana.jpg', totalViews: 0, totalVoices: 0},
@@ -61,3 +34,33 @@ function renderImages() {
     // 4. append the image to the div element
  let imgContainer = document.getElementById('img1Container');
 }
+
+let clicks = 0;
+
+function renderImages() {
+for (let i=0; i<=2; i++) {
+    let imgContainer = document.getElementById(`img${i}Container`);
+    let img = document.createElement('img');
+    imgContainer.appendChild(img);
+    img.setAttribute('src', PRODUCTS_ARRAY[i].imgURL);
+    img.setAttribute('id', PRODUCTS_ARRAY[i].HTMLid);
+}
+
+
+}
+
+function handleClick(event) {
+    click++;
+    console.log('I was clicked, and my id is : ', event.target.id)
+    let parentId = event.target.id;
+}
+
+(function startApp() {
+    for (let i=0; i < 3; i++) {
+        let imgContainer = document.getElementById(`img${i}Container`);
+        imgContainer.addEventListener('click', handleClick);
+}
+
+renderImages();
+
+})();
