@@ -22,20 +22,19 @@ let PRODUCTS_ARRAY = [
 {HTMLid : 'wine-glass', imgURL: './assets/wine-glass.jpg', totalViews: 0, totalVoices: 0},
 
 ]
-
+let clicks = 0;
 
 function renderImages() {
  
- for ( let i=0; i<=2; i++)
+ for ( let i=0; i<=2; i++);
  
-    //1. get element from html that we wnat to attatch to the image
-    //2. create an image element
-    // set src property of the image to the image url property of the item
-    // 4. append the image to the div element
  let imgContainer = document.getElementById('img1Container');
+PRODUCTS_ARRAY[i].totalViewsi++;
+
+
 }
 
-let clicks = 0;
+
 
 function renderImages() {
 for (let i=0; i<=2; i++) {
@@ -50,7 +49,7 @@ for (let i=0; i<=2; i++) {
 }
 
 function handleClick(event) {
-    click++;
+    clicks++;
     console.log('I was clicked, and my id is : ', event.target.id)
     let parentId = event.target.id;
 }
@@ -59,6 +58,7 @@ function handleClick(event) {
     for (let i=0; i < 3; i++) {
         let imgContainer = document.getElementById(`img${i}Container`);
         imgContainer.addEventListener('click', handleClick);
+        if (what)
 }
 
 renderImages();
