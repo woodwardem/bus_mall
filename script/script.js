@@ -24,17 +24,6 @@ let PRODUCTS_ARRAY = [
 ]
 let clicks = 0;
 
-function renderImages() {
- 
- for ( let i=0; i<=2; i++);
- 
- let imgContainer = document.getElementById('img1Container');
-PRODUCTS_ARRAY[i].totalViewsi++;
-
-
-}
-
-
 
 function renderImages() {
 for (let i=0; i<=2; i++) {
@@ -43,6 +32,10 @@ for (let i=0; i<=2; i++) {
     imgContainer.appendChild(img);
     img.setAttribute('src', PRODUCTS_ARRAY[i].imgURL);
     img.setAttribute('id', PRODUCTS_ARRAY[i].HTMLid);
+    img.setAttribute('class', 'item');
+
+    PRODUCTS_ARRAY[i].totalViews++;
+    console.log('total views: ', PRODUCTS_ARRAY[i].HTMLid, PRODUCTS_ARRAY[i].totalViews)
 }
 
 
@@ -51,16 +44,29 @@ for (let i=0; i<=2; i++) {
 function handleClick(event) {
     clicks++;
     console.log('I was clicked, and my id is : ', event.target.id)
-    let parentId = event.target.id;
+    let imageid = event.target.id;
+    for (let i=0; i < PRODUCTS_ARRAY.length; i++) {
+        if ( imageid === PRODUCTS_ARRAY[i].HTMLid) {
+         PRODUCTS_ARRAY[i].totalVotes++
+         console.log('total votes' , PRODUCTS_ARRAY[i].totalVotes);
+        }
+    }
 }
 
+for ( let i=0; i<3; i++) {
+    PRODUCTS_ARRAY.shift();
+}
 (function startApp() {
+
+    //alert('poll has started');
+
+    
     for (let i=0; i < 3; i++) {
         let imgContainer = document.getElementById(`img${i}Container`);
         imgContainer.addEventListener('click', handleClick);
-        if (what)
+    
 }
-
+    
 renderImages();
 
 })();

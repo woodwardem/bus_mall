@@ -34,7 +34,7 @@ main > #leftnav {
     grid-row-start: 1;
     grid-row-end: 5;
     height: 520px;
-    font-size: 28px;
+    font-size: 24px;
 }
 #head5{
  text-align: center;
