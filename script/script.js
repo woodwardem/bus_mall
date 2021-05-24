@@ -51,6 +51,13 @@ function handleClick(event) {
          console.log('total votes' , PRODUCTS_ARRAY[i].totalVotes);
         }
     }
+     if (clicks !== 25) {
+         for (let i=0; i<3; i++) {
+             let item = PRODUCTS_ARRAY.shift();
+             PRODUCTS_ARRAY.splice(PRODUCTS_ARRAY.length =1 , 0, item )
+         }
+     }
+
 }
 
 for ( let i=0; i<3; i++) {
