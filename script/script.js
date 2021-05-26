@@ -83,10 +83,10 @@ renderImages();
   
 }
 function renderResults() {
-    let ResultSection = document.getElementById('result section');
+    let resultSection = document.getElementById('result section');
     let div = document.createElement('div');
     div.setAttribute('id', 'result');
-    ResultSection.appendChild(div);
+    resultSection.appendChild(div);
 
 
     let h3 = document.createElement('ol');
@@ -104,14 +104,57 @@ function renderResults() {
         listItem.textContent`${PRODUCTS_ARRAY[i].totalVotes} for ${PRODUCTS_ARRAY[i].HTMLid}`;
         ol.appendChild(listItem);
     }
-}
+    function renderChart() {
+        console.log('renderChart was called')
+        const barData = {
+          type: 'bar',
+          data: {
+            labels : [],
+            datasets : [
+              {
+                data: [],
+                backgroundColor: 'rgb(64, 211, 191',
+                borderColor: 'rbb(46, 146, 133',
+                pointBackgroundColor: 'rgb(46, 135, 100',
+              }
+            ]
+          },
+          options: {
+            scales: {
+              xAxes: [{
+                maxBarThickness: 30,
+              }],
+              yAxes: [{
+                gridLines: {
+                  offsetGridLines: false,
+                },
+                ticks: {stepSize: 1},
+                maintainAspectRatio: false,
+              }]
+            },
+            legend: {
+              display: false
+            },
+            title: {
+              display: true,
+              text: 'Final Vote Data'
+            }
+          }
+        };
+      let container = document.getElementById('graph');
+      let canvas = document.createElement('canvas');
+      let ctx = canvas.getContext('2d');
+      container.appendChild(canvas);
+
+      for (let i=0; i< PRODUCTS_ARRAY.length; i++) {
+          barData.data.labels.push(PRODUCTS_ARRAY[i].HTMLid)
+      }
 
 
 
 
 (function startApp() {
 
-    //alert('poll has started');
 
     
     for (let i=0; i < 3; i++) {
