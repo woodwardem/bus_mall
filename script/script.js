@@ -15,7 +15,7 @@ let PRODUCTS_ARRAY = [
 {HTMLid: 'pet-sweep', imgURL: './assets/pet-sweep.jpg', totalViews: 0, totalVotes: 0},
 {HTMLid: 'scissors', imgURL: './assets/scissors.jpg', totalViews: 0, totalVotes: 0},
 {HTMLid: 'shark', imgURL: './assets/shark.jpg', totalViews: 0, totalVotes: 0},
-{HTMLid: 'sweep', imgURL: './assets/sweep.jpg', totalViews: 0, totalVotes: 0},
+{HTMLid: 'sweep', imgURL: './assets/sweep.png', totalViews: 0, totalVotes: 0},
 {HTMLid: 'tauntaun', imgURL: './assets/tauntaun.jpg', totalViews: 0, totalVotes: 0},
 {HTMLid: 'unicorn', imgURL: './assets/unicorn.jpg', totalViews: 0, totalVotes: 0},
 {HTMLid: 'water-can', imgURL: './assets/water-can.jpg', totalViews: 0, totalVotes: 0},
@@ -83,7 +83,7 @@ renderImages();
   
 }
 function renderResults() {
-    let resultSection = document.getElementById('result section');
+    let resultSection = document.getElementById('resultSection');
     let div = document.createElement('div');
     div.setAttribute('id', 'result');
     resultSection.appendChild(div);
@@ -101,9 +101,11 @@ function renderResults() {
 
     for (let i=0; i < PRODUCTS_ARRAY.length; i++) {
         let listItem = document.createElement('li');
-        listItem.textContent`${PRODUCTS_ARRAY[i].totalVotes} for ${PRODUCTS_ARRAY[i].HTMLid}`;
+    listItem.textContent =`${PRODUCTS_ARRAY[i].HTMLid} has ${PRODUCTS_ARRAY[i].totalVotes}`
         ol.appendChild(listItem);
     }
+    
+}
     function renderChart() {
         console.log('renderChart was called')
         const barData = {
@@ -145,26 +147,26 @@ function renderResults() {
       let canvas = document.createElement('canvas');
       let ctx = canvas.getContext('2d');
       container.appendChild(canvas);
-
       for (let i=0; i< PRODUCTS_ARRAY.length; i++) {
-          barData.data.labels.push(PRODUCTS_ARRAY[i].HTMLid)
-          barData.data.datasets[0]['data'].push(PRODUCTS_ARRAY[i].totalVotes);
+        barData.data.labels.push(PRODUCTS_ARRAY[i].HTMLid)
+        barData.data.datasets[0]['data'].push(PRODUCTS_ARRAY[i].totalVotes);
       }
-
-
-  new Chart(ctx, barData);
+    new Chart(ctx, barData);
+    renderChart();
     }
+      
+
+
+  
+    
 
 (function startApp() {
 
 
     
     for (let i=0; i < 3; i++) {
-        let imgContainer = document.getElementById(`img${i}Container`);
-        imgContainer.addEventListener('click', handleClick);
-    
-}
-    
-renderImages();
-
-})();
+       let imgContainer = document.getElementById(`img${i}Container`);
+       imgContainer.addEventListener('click', handleClick);
+    }
+    renderImages();
+    })();
