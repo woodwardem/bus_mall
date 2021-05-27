@@ -70,3 +70,17 @@ footer {
     position: fixed;
     width: 1350px;
 }
+
+.deck {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

@@ -148,10 +148,12 @@ function renderResults() {
 
       for (let i=0; i< PRODUCTS_ARRAY.length; i++) {
           barData.data.labels.push(PRODUCTS_ARRAY[i].HTMLid)
+          barData.data.datasets[0]['data'].push(PRODUCTS_ARRAY[i].totalVotes);
       }
 
 
-
+  new Chart(ctx, barData);
+    }
 
 (function startApp() {
 
