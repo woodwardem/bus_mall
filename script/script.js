@@ -69,7 +69,7 @@ renderImages();
 
 
 }else {
-    let divs = document.getElementsByTagName('div');
+    let divs = document.getElementById('rightdiv');
     for(let i=1; i<divs.length - 1; i++) {
         divs[i].removeEventListener('click', handleClick);
     }

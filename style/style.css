@@ -12,8 +12,17 @@ main {
 }
 
  .images {
-height: 160px;
-width: 160px;
+height: 200px;
+width: 200px;
+margin-left: 50px;
+margin-right: 50px;
+
+display: flex;
+flex-direction: row;
+
+
+
+
 
 
 margin-top: 100px;
