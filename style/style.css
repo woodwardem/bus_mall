@@ -14,11 +14,10 @@ main {
  .images {
 height: 160px;
 width: 160px;
-
-
+text-align: center;
 margin-top: 100px;
-
 margin-right: 90px;
+
 }
 
 
@@ -36,9 +35,7 @@ main > #leftnav {
     height: 520px;
     font-size: 24px;
 }
-#head5{
- text-align: center;
-}
+
 section {
     background: darkblue;
     border: 1px solid lightsalmon;
