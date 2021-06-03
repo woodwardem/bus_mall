@@ -12,9 +12,25 @@ main {
 }
 
  .images {
+<<<<<<< HEAD
 height: 160px;
 width: 160px;
 text-align: center;
+=======
+height: 200px;
+width: 200px;
+margin-left: 50px;
+margin-right: 50px;
+
+display: flex;
+flex-direction: row;
+
+
+
+
+
+
+>>>>>>> 9de94a8a5f80adb6fd8df07616834c5ff861e3bc
 margin-top: 100px;
 margin-right: 90px;
 
