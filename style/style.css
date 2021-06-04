@@ -2,12 +2,12 @@ h1 {
     background: darkblue;
     border: 1px solid darkblue;
     text-align: center;
-    
+    width: 1350px;
     
 }
 main {
     display: grid;
-    grid-template-columns: 210px 1fr 210px;
+    grid-template-columns: 250px 1fr 250px;
     justify-content: center;
 }
 
@@ -44,7 +44,7 @@ main > #leftnav {
     order: 1;
     display: grid;
     grid-column-start: 1;
-    width: 250px;
+    
     grid-row-start: 1;
     grid-row-end: 5;
     height: 520px;
@@ -61,18 +61,18 @@ section {
     font-size: 28px;
     justify-content: center;
 }
-main > #rightdiv {
-    background: lightskyblue;
-    border: 1px solid lightskyblue;
-    text-align: center;
-    order: 3;
-    display: grid;
-    height: 520px;
-    font-size: 28px;
-    justify-content: center;
-    width: 220px;
+    main > #rightdiv { 
+    background: lightskyblue; 
+     border: 1px solid lightskyblue; 
+     text-align: center; 
+     order: 3; 
+    display: grid; 
+    height: 520px; 
+     font-size: 28px; 
+    justify-content: center; 
+     width: 250px; 
     
-}
+ } 
 
 
 footer {
