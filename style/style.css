@@ -7,16 +7,16 @@ h1 {
 }
 main {
     display: grid;
-    grid-template-columns: 250px 1fr 250px;
+    grid-template-columns: 210px 1fr 210px;
     justify-content: center;
 }
 
  .images {
-<<<<<<< HEAD
+
 height: 160px;
 width: 160px;
 text-align: center;
-=======
+
 height: 200px;
 width: 200px;
 margin-left: 50px;
@@ -30,7 +30,6 @@ flex-direction: row;
 
 
 
->>>>>>> 9de94a8a5f80adb6fd8df07616834c5ff861e3bc
 margin-top: 100px;
 margin-right: 90px;
 
@@ -45,7 +44,7 @@ main > #leftnav {
     order: 1;
     display: grid;
     grid-column-start: 1;
-    
+    width: 250px;
     grid-row-start: 1;
     grid-row-end: 5;
     height: 520px;
@@ -71,7 +70,7 @@ main > #rightdiv {
     height: 520px;
     font-size: 28px;
     justify-content: center;
-    width: 250px;
+    width: 220px;
     
 }
 
